@@ -7,3 +7,4 @@ while t!=0:
     t = int(input("Escreva um número inteiro:"))
 print(a//l)
 n=6
+m=0

@@ -8,3 +8,4 @@ while t!=0:
 print(a//l)
 n=6
 m=0
+bn=90

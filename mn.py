@@ -9,3 +9,5 @@ print(a//l)
 n=6
 m=0
 bn=90
+if 5>0:
+    print("idiota")

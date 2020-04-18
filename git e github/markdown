@@ -1,0 +1,35 @@
+negrito __palavra__ ou **palavra**
+
+itálico _palavra_ ou *palavra*
+
+riscado ~~palavra~~
+
+# Título
+## Título
+### Título
+#### Título
+___ 
+***
+
+__*negrito e itálico*__ aaa
+
+**_negrito e ittálico_** aaa
+
+1. teste1
+1. teste2
+1. teste3
+1. teste4
+6757868. teste5
+87675987. teste6
+
+Num | Nome | Nota
+---|---|---
+1 | Angel | 19
+2 | Carla | 20
+3 | José | 17
+
+`comandos`
+
+```
+comados muito grandes
+```

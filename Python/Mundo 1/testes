@@ -1,0 +1,10 @@
+print(f"Prazer em te conhecer {input('Digita o teu nome:'):^20}!")
+
+print(f"Prazer em te conhecer {input('Digita o teu nome:'):<20}!")
+
+print(f"Prazer em te conhecer {input('Digita o teu nome:'):>20}!")
+
+print(f"Digitaste no número {float(input('Digita um número:')):.2f}!")
+
+print("Eu vou \n para a escolo",end=" ")
+print("Consegui")

@@ -48,7 +48,7 @@ print("santo" in a.lower().split()[0])'''
 print("silva" in a.lower())'''
 
 # Exercício 26
-'''a=input("Digita uma frase:").strip().lower()
+'''a=input("Digita uma Frase:").strip().lower()
 print(f"A letra (A) aparece {a.count('a')} vezes.")
 print(f"Aparece pela primeira vez na posição {a.find('a')+1}")
 print(f"Aparece pela ultima vez na posicção {a.rfind('a')+1}")

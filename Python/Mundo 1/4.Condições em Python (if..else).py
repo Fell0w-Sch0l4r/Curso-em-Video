@@ -43,22 +43,17 @@ else:
 a=int(input("Digita o primeiro número:"))
 b=int(input("Digita o segundo número:"))
 c=int(input("Digita o terceiro número:"))
-if a>b>c or a>c>b:
-    if c<b:
-        print(f"O maior é o {a} e o menor é o {c}")
-    else:
-        print(f"O maior é o {a} e o menor é o {b}")
-
-if b>a>c or b>c>a:
-    if a<c:
-        print(f"O maior é o {b} e o menor é o {a}")
-    else:
-        print(f"O amior é o {b} e o menor o {c}")
-if c>a>b or c>b>a:
-    if a<b:
-        print(f"O maior é o {c} e o menor é o {a}")
-    else:
-        print(f"O maior é o {c} e o menor o {b} ")
+menor=a
+if b<c and b<a:
+    menor=b
+if c<a and c<b:
+    menor=c
+maior=a
+if b>a and b>c:
+    maior=b
+if c>a and c>b:
+    maior=c
+print(f"O maior é o {maior} e o menor o {menor} .")
 # Exercício 34
 '''a=int(input("Digita o valor do seu salário:"))
 if a>1250:

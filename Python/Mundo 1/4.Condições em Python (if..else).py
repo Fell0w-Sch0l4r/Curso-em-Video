@@ -27,20 +27,14 @@ else:
     print(f"A viagem custará R${a*0.45}")'''
 
 # Exercício 32
-'''a=int(input("Digita um ano:"))
-if a%4==0:
-    if a%100==0:
-        if a%400==0:
-            print(f"O ano {a} é bisssexto.")
-        else:
-            print(f"O ano {a} não é bisssexto.")
-    else:
-        print(f"O ano {a} é bisssexto.")
+a=int(input("Digita um ano:"))
+if a%4==0 and a%100!=0 or a%400==0:
+    print(f"O ano {a} é bissexto.")
 else:
-    print(f"O ano {a} não é bisssexto.")'''
+    print(f"O ano {a} não é bissexto.")
 
 # Exercício 33
-a=int(input("Digita o primeiro número:"))
+'''a=int(input("Digita o primeiro número:"))
 b=int(input("Digita o segundo número:"))
 c=int(input("Digita o terceiro número:"))
 menor=a
@@ -53,7 +47,7 @@ if b>a and b>c:
     maior=b
 if c>a and c>b:
     maior=c
-print(f"O maior é o {maior} e o menor o {menor} .")
+print(f"O maior é o {maior} e o menor o {menor} .")'''
 # Exercício 34
 '''a=int(input("Digita o valor do seu salário:"))
 if a>1250:

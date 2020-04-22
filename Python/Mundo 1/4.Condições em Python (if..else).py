@@ -27,11 +27,11 @@ else:
     print(f"A viagem custará R${a*0.45}")'''
 
 # Exercício 32
-a=int(input("Digita um ano:"))
+'''a=int(input("Digita um ano:"))
 if a%4==0 and a%100!=0 or a%400==0:
     print(f"O ano {a} é bissexto.")
 else:
-    print(f"O ano {a} não é bissexto.")
+    print(f"O ano {a} não é bissexto.")'''
 
 # Exercício 33
 '''a=int(input("Digita o primeiro número:"))

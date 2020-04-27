@@ -11,5 +11,5 @@ print(f"Você nasceu no dia {int(input('Dia:'))} de {input('Mês:')} de {int(inp
 
 # Exercício 3
 '''
-print(f"A soma é {int(input('Primeiro Número:'))+int(input('Segundo Número:'))}.")
+print(f"A soma é {int(input('Primeiro Número:'))+int(input('Segundo Número: '))}.")
 '''

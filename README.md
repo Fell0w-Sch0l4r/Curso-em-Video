@@ -1,2 +1,2 @@
 # Curso-em-Video
-codigos das aulas de dos cursos do curso em video
+Códigos das aulas de dos cursos do Curso em Video.

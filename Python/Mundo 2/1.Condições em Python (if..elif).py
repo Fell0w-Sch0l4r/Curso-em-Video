@@ -10,6 +10,7 @@ else:
     print(f"Nós faremos um empréstimo de 500000 euros e o Sr pagará {c} euros por mês.")'''
 
 # Exercício 37
+
 # Exercício 38
 '''a,b=int(input("Digita o primeirp número:")),int(input("Digita o segundo número:"))
 if a>b:
@@ -95,7 +96,7 @@ elif b==3:
     print(f"Pagará com 20% de juro por {a+a*0.20} euros.")
 '''
 # Exercício 45 "Jogo de pedra papel tesoura"
-'''from random import choice
+from random import choice
 a=choice(["pedra","papel","tesousa"])
 print("[0] Pedra\n[1] Papel\n[2] Tesoura")
 b=["pedra","papel","tesoura"][int(input("A sua opção:"))]
@@ -105,4 +106,4 @@ if a=="tesoura" and b=="papel" or a=="papel" and b=="pedra" or a=="pedra" and b=
 elif a==b:
     print("Foi um empate.")
 else:
-    print(f"Você ganhou porque o computador escolheu {a}.")'''
+    print(f"Você ganhou porque o computador escolheu {a}.")

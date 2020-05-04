@@ -79,16 +79,18 @@ for c in range(1,8):
         b+=1
 print(f"{a} pessoas são adultas.")
 print(f"{b} pessoas são menor de idade")'''
-# Exercício 55
-'''maior=menor=float(input("O peso da 1º pessoa (kg):"))
-for c in range(2,6):
+# Exercício 55  Fiz de uma forma diferente, mas ao mesmo tempo eficiente no commit anteriior
+maior=menor=0
+for c in range(1,6):
     a=float(input(f"O peso da {c}º pessoa (kg):"))
-    if a>maior:
+    if c==1:
+        maior=menor=a
+    elif a>maior:
         maior=a
     elif a<menor:
         menor=a
 print(f"A pessoa mais leve pesa {menor}Kg.")
-print(f"A pessoa mais cheinha pesa {maior}Kg.")'''
+print(f"A pessoa mais cheinha pesa {maior}Kg.")
 # Exercício 56
 '''q=0
 maior=0

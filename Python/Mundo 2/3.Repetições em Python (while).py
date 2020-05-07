@@ -4,14 +4,18 @@ while a not in "fmFM":
     a=input("Por favor, digite o seu sexo [M/F]:")'''
 
 # Exercício 58
-'''print("Adivinha o entre 1 a 10, o número que o computador escolhe!")
+'''print("Adivinha o entre 0 a 10, o número que o computador escolhe!")
 from random import randint
-a=randint(1,10)
+a=randint(0,10)
 b=1
 c=int(input("Digite o seu palpite:"))
 while a!=c:
-    c=int(input("Tente outravés:"))
-    b+=1
+    if a<c:
+        c = int(input("Tente outravés com um número menor:"))
+        b += 1
+    else:
+        c=int(input("Tente outravés  com um número maior:"))
+        b+=1
 print("Parabens, acertaste.")
 print(f"Acertaste na {b}º tentativa.")'''
 
@@ -30,11 +34,15 @@ while c!=5:
         print(f"{a} X {b} = {a*b} !\n")
     elif c==3:
         if a>b:
-            print(f"O número {a} é o maior.\n")
+            print(f"Entre {a} e {b}, o número {a} é o maior.\n")
+        elif a<b:
+            print(f"Entre {a} e {b}, o número {b} é o maior.\n")
         else:
-            print(f"O número {b} é o maior.\n")
+            print("Os números digitados são iguais.")
     elif c==4:
         a, b = int(input("Digite um número:")), int(input("Digite outro número:"))
+    else:
+        print("Por favor, escolha uma opção.")
     print("[1] Somar\n"
           "[2] Multiplicar\n"
           "[3] O Maior\n"
@@ -78,7 +86,7 @@ print("ACABOU")'''
 '''print("Programa de progressão aritmética.")
 a=int(input("Primiro termo:"))
 b=int(input("Razão:"))
-m=10
+m=c=10
 d=0
 while m!=0:
     if d!=m:
@@ -86,35 +94,35 @@ while m!=0:
         a+=b
         d+=1
     else:
-        print("ACABOU")
+        print("PAUSA")
         m=int(input("Mais quantos termos?:"))
+        c+=m
         d=0
-print("ACABOU")'''
+print(f"Progressão aritmética finalizada com {c} termos.")'''
 # Exercício 63
-'''n=int(input("Números da sequência:"))
+'''print("Sequência de Fibonacci")
+n=int(input("Quantos números quer mostar?:"))
 a=0
 b=1
-z=0
-while z<n:
-    print(a,end=" ")
+while n>0:
+    print(a,end=" > ")
     a+=b
-    z+=1
-    if z<n:
-        print(b,end=" ")
+    n-=1
+    if n!=0:
+        print(b,end=" > ")
         b+=a
-        z+=1'''
+        n-=1
+print("FIM")'''
 # Exercício 64
 '''a=int(input("digite um número:"))
-q=0
-s=0
+q=s=0
 while a!=999:
     s+=a
     q+=1
     a=int(input("Digite outro número:"))
 print(f"Foram digitados {q} números e a soma deles é {s}!")'''
-
 # Exercício 65
-q=maior=menor=a=int(input("Digite um valor:"))
+'''q=maior=menor=a=int(input("Digite um valor:"))
 s=input("Quer continuar [S/N]:").lower().strip()
 z=1
 while s=="s":
@@ -126,6 +134,6 @@ while s=="s":
     elif a<menor:
         menor=a
     s=input("Quer continuar?:")
-print(f"A média dos valores digiados foi {q/z}!")
+print(f"Foram digitados {z} números com a média de {q/z}!")
 print(f"O maior valor digitado foi {maior}.\n"
-      f"O menor valor digitado foi {menor}.")
+      f"O menor valor digitado foi {menor}.")'''

@@ -137,3 +137,105 @@ while s=="s":
 print(f"Foram digitados {z} números com a média de {q/z}!")
 print(f"O maior valor digitado foi {maior}.\n"
       f"O menor valor digitado foi {menor}.")'''
+
+# Exercício 66
+'''q=s=0
+while True:
+    n=int(input("Digita uma número (999 para parar):"))
+    if n==999:
+        break
+    q+=1
+    s+=n
+print(f"A soma dos {q} valores foi {s}.")'''
+# Exercício 67
+'''while True:
+    n=int(input("Quer ver a tabuada de qual valor?:"))
+    if n<0:
+        break
+    print("-"*30)
+    for c in range(1,13):
+        print(f"{n} x {c} = {n*c}")
+    print("-"*30)
+print("Programa de tabuada finalizado. Volte sempre.")'''
+# Exercício 68
+'''from random import randint
+print("Vamos jogar par ou impar.")
+a=0
+while True:
+    n=int(input("Digite o valor:"))
+    pc=randint(1,10)
+    escolha=input("Par ou Impar [P/I}:").strip().lower()
+    if (n+pc)%2==0 and escolha=="p":
+        print(f"Você jogou {n} e o computador {pc}. Total de {n+pc} deu par.")
+        print("Venceu.")
+        a+=1
+        print("Vamos jogar novamente...")
+    elif (n+pc)%2!=0 and escolha=="i":
+        print(f"Você jogou {n} e o computador {pc}. Total de {n + pc} deu impar")
+        print("Venceu.")
+        a+=1
+        print("Vamos jogar novamente...")
+    elif (n+pc)%2==0 and escolha=="i":
+        print(f"Você jogou {n} e o computador {pc}. Total de {n + pc} deu par.")
+        print("Perdeu.")
+        break
+    else:
+        print(f"Você jogou {n} e o computador {pc}. Total de {n + pc} deu impar")
+        print("Perdeu.")
+        break
+print("GAME OVER! Venceu {a} vezes.")'''
+
+# Exercício 69
+'''m=ma=m20=0
+while True:
+    print("CADASTRE UMA PESSOA")
+    i=int(input("IDADE:"))
+    s=input("SEXO: [M/F]").lower().strip()
+    while s not in "fm":
+        s = input("SEXO: [M/F]").lower().strip()
+    if i>18:
+        m+=1
+    if s=="m":
+        ma+=1
+    if i<20 and  s=="f":
+        m20+=1
+    e=input("Quer continuar?[S/N]:").lower().strip()
+    while e not in "sn":
+        e = input("Quer continuar?[S/N]:").lower().strip()
+    if e=="n":
+        break
+print(f"{m} pessoa(s) possuem mais de 18 anos.")
+print(f"{ma} homem(s) foram cadastrado(s).")
+print(f"{m20} mulhere(s) têm menos de 20 anos.")'''
+
+# Exercício 70
+'''menor=t=m1=c=0
+menos=""
+print("DESCONTÃO")
+while True:
+    np=input("Nome do produto:").strip().title()
+    p=float(input("PREÇO: R$"))
+    t+=p
+    if p>1000:
+        m1+=1
+    if c==0:
+        menor=p
+        menos=np
+    elif p<menor:
+        menor=p
+        menos=np
+    c+=1
+    e=input("Quer continuar?: [S/N] ").lower().strip()
+    while e not in "sn":
+        e = input("Quer continuar?: [S/N] ").lower().strip()
+    if e=="n":
+        break
+print(f"Ao total foi gasto R${t} .")
+print(f"Temos {m1} produtos custando mais de R$1000.")
+print(f"{menos} é o produto mais barato, custando R${menor}.")'''
+# Exercício 71
+print("BANCO DO CURSO EM VÍDEO")
+n50=n20=n10=n1=0
+while True:
+    v=int(input("Que valor vai querer levantar?: R$"))
+    if

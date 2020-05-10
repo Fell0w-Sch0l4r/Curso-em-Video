@@ -165,25 +165,25 @@ while True:
     n=int(input("Digite o valor:"))
     pc=randint(1,10)
     escolha=input("Par ou Impar [P/I}:").strip().lower()
+    while escolha not in "pi":
+        escolha = input("Par ou Impar [P/I}:").strip().lower()
+    print(f"Você jogou {n} e o computador {pc}. Total de {n + pc}",end=" ")
+    print("deu par." if (n+pc)%2==0 else "deu impar.")
     if (n+pc)%2==0 and escolha=="p":
-        print(f"Você jogou {n} e o computador {pc}. Total de {n+pc} deu par.")
         print("Venceu.")
         a+=1
         print("Vamos jogar novamente...")
     elif (n+pc)%2!=0 and escolha=="i":
-        print(f"Você jogou {n} e o computador {pc}. Total de {n + pc} deu impar")
         print("Venceu.")
         a+=1
         print("Vamos jogar novamente...")
     elif (n+pc)%2==0 and escolha=="i":
-        print(f"Você jogou {n} e o computador {pc}. Total de {n + pc} deu par.")
         print("Perdeu.")
         break
     else:
-        print(f"Você jogou {n} e o computador {pc}. Total de {n + pc} deu impar")
         print("Perdeu.")
         break
-print("GAME OVER! Venceu {a} vezes.")'''
+print(f"GAME OVER! Venceu {a} veze(s).")'''
 
 # Exercício 69
 '''m=ma=m20=0
@@ -193,7 +193,7 @@ while True:
     s=input("SEXO: [M/F]").lower().strip()
     while s not in "fm":
         s = input("SEXO: [M/F]").lower().strip()
-    if i>18:
+    if i>=18:
         m+=1
     if s=="m":
         ma+=1
@@ -218,10 +218,7 @@ while True:
     t+=p
     if p>1000:
         m1+=1
-    if c==0:
-        menor=p
-        menos=np
-    elif p<menor:
+    if c==0 or p<menor:
         menor=p
         menos=np
     c+=1
@@ -232,23 +229,24 @@ while True:
         break
 print(f"Ao total foi gasto R${t} .")
 print(f"Temos {m1} produtos custando mais de R$1000.")
-print(f"{menos} é o produto mais barato, custando R${menor}.")'''
+print(f"{menos} é o produto mais barato que custa R${menor}.")'''
 # Exercício 71
-'''print("BANCO DO CURSO EM VÍDEO")
+print("BANCO DO CURSO EM VÍDEO")
 n50=n20=n10=n1=0
 v=int(input("Que valor vai querer levantar?: R$"))
 if v//50>0:
     n50=v//50
     v-=n50*50
-    print(f"Total de {n50} notas de R$50 ")
+    print(f"Total de {n50} nota(s) de R$50 ")
 if v//20>0:
     n20=v//20
     v-=n20*20
-    print(f"Total de {n20} notas de R$20")
+    print(f"Total de {n20} nota(s) de R$20")
 if v//10>0:
     n10=v//10
     v-=n10*10
-    print(f"Total de {n10} notas de R$10")
+    print(f"Total de {n10} nota(s) de R$10")
 if v//1>0:
     n1=v//1
-    print(f"Total de {n1} notas de R$1")'''
+    print(f"Total de {n1} nota(s) de R$1")
+print("Volte sempre ao nosso banco. Tenha um bom dia.")

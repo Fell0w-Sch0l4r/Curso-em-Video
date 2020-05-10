@@ -234,8 +234,21 @@ print(f"Ao total foi gasto R${t} .")
 print(f"Temos {m1} produtos custando mais de R$1000.")
 print(f"{menos} é o produto mais barato, custando R${menor}.")'''
 # Exercício 71
-print("BANCO DO CURSO EM VÍDEO")
+'''print("BANCO DO CURSO EM VÍDEO")
 n50=n20=n10=n1=0
-while True:
-    v=int(input("Que valor vai querer levantar?: R$"))
-    if
+v=int(input("Que valor vai querer levantar?: R$"))
+if v//50>0:
+    n50=v//50
+    v-=n50*50
+    print(f"Total de {n50} notas de R$50 ")
+if v//20>0:
+    n20=v//20
+    v-=n20*20
+    print(f"Total de {n20} notas de R$20")
+if v//10>0:
+    n10=v//10
+    v-=n10*10
+    print(f"Total de {n10} notas de R$10")
+if v//1>0:
+    n1=v//1
+    print(f"Total de {n1} notas de R$1")'''

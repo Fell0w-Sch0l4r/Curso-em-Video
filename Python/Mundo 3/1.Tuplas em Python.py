@@ -1,29 +1,33 @@
 # Exercício 72
-'''numeros=("Um","Dois","três","Quatro","Cinco","Seis","Sete","Oito","Nove","Dez",
+'''numeros=("Zero","Um","Dois","três","Quatro","Cinco","Seis","Sete","Oito","Nove","Dez",
         "Onze","Doze","Treze","Catorze","Quinze","Dezasseis","Dezassete","Dezoito","Dezanove","Vinte")
-a=int(input("Digite um número entre 0 a 20:"))
-while a<0 or a>20:
-    a=int(input("Por favor, Digite um número entre 0 a 20:"))
-print(f"Digitaste o número {numeros[a-1]}.")'''
+while True:
+    a = int(input("Digite um número entre 0 a 20:"))
+    while a<a or a>20:
+        a=int(input("Por favor, Digite um número entre 0 a 20:"))
+    print(f"Digitaste o número {numeros[a]}.")
+    escolha=input("Quer continuar?").lower().strip()
+    while escolha not in "sn":
+        escolha = input("Quer continuar?").lower().strip()
+    if escolha=="n":
+        break'''
+
 # Exercício 73
 '''brasileirao=("Flamengo","Santos","Palmeiras","Grêmio","Athletico-Pr","São Paulo","Internacional","Corithians","Fortaleza","Goiás",
              "Bahia","Vasco","Athlético-Mg","Fluminense","Botafogo","Ceará","Cruzeiro","Csa","Chapecoense","Avaí")
 print(f"Lista das equipas do brasileirão:{brasileirao}")
+print(f"OS primeiros 5 colocados foram: {brasileirao[:6]}")
 print(f"Os últimos 4 são: {brasileirao[-4:]}")
 print(f"As equipas em ordem alfabética:{sorted(brasileirao)}")
 print(f"O Chapecoense está na {brasileirao.index('Chapecoense')}ª posição.")'''
 # Exercício 74
-'''from random import randint
+from random import randint
 numeros=(randint(0,10),randint(0,10),randint(0,10),randint(0,10),randint(0,10))
 print("Os valores sorteados foram:",end=" ")
 maior=menor=numeros[0]
 for c in numeros:
     print(c,end=" ")
-    if c>maior:
-        maior=c
-    elif c<menor:
-        menor=c
-print(f"\nO maior número é o {maior} é o menor o {menor}.")'''
+print(f"\nO maior número é o {max(numeros)} é o menor o {min(numeros)}.")
 # Exercício 75
 
 

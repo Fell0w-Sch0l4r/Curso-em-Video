@@ -1,5 +1,5 @@
 # Exercício 78
-num=[]
+'''num=[]
 for c in range (0,5):
     num.append(int(input(f"Digite o valor para a Posição {c}:")))
 print(f"Digitou os valores {num}.")
@@ -10,7 +10,7 @@ for c,m in enumerate(num):
 print(f"\nO menor valor digitado foi {min(num)}, nas posições:",end=" ")
 for c,m in enumerate(num):
     if min(num)==m:
-        print(f"{c:.<4}",end=" ")
+        print(f"{c:.<4}",end=" ")'''
 # Exercício 79
 '''val=[]
 while True:
@@ -32,7 +32,7 @@ print(f"Digitou os valores {sorted(val)}")'''
 '''val=[]
 for c in range(0,5):
     a=int(input("Digita um número:"))
-    if len(val)==0 or a>val[-1]:
+    if len(val)==0 or a>val[-1]:#També pode ser if c==0
         val.append(a)
         print(f"Valor {a} adicionado na última posição.")
     else:
@@ -56,13 +56,13 @@ lista.sort(reverse=True)
 print(f"Os valores em ordem decrescente são: {lista}")
 print("O valor 5 faz parte da lista." if 5 in lista
       else "O valor 5 não faz arte da lista.")'''
-#if 5 in lista:
-#    print("O valor 5 faz parte da lista e enconstra-se em posição:",end=" ")
-#    for c,m in enumerate(lista):
-#        if m==5:
-#            print(c,end=" ")
-#else:
-#    print("O valor 5 não faz arte da lista.")
+'''if 5 in lista:
+    print("O valor 5 faz parte da lista e enconstra-se em posição:",end=" ")
+    for c,m in enumerate(lista):
+        if m==5:
+            print(c,end=" ")
+else:
+    print("O valor 5 não faz arte da lista.")'''
 # Exercício 82
 '''lista=[]
 par=[]

@@ -137,16 +137,45 @@ numeros[0].sort()
 numeros[1].sort()
 print(f"Os valores pares digitados foram {numeros[0]}.")
 print(f"Os valores ímpares digitados foram {numeros[1]}.")'''
+
+
 # Exercício 86
-matriz=[[1,2,3],[4,5,6],[7,8,9]]
-matrix=[1,2,3,4,5,6,7,8,9]
-for c in range(0,9):
-    print(c)
-print("[  1  ]")
+'''matrix=[[],[],[]]
+for t in range(0,3):
+    for r in range(0,3):
+        matrix[t].append(int(input(f"Digita um valor para [{t}, {r}]:")))
+print(matrix)
+print("=-"*20)
+for e in matrix:
+    for d,r in enumerate(e):
+        if d == 2:
+            print(f"[  {r}  ]")
+        else:
+            print(f"[  {r}  ]", end=" ")'''
 # exercício 87
+'''matrix = [[], [], []]
+par=0
+sc3=0
+for t in range(0,3):
+    for r in range(0,3):
+        matrix[t].append(int(input(f"Digita um valor para [{t}, {r}]:")))
+        if matrix[t][r]%2==0:
+            par+=matrix[t][r]
+    sc3 += matrix [t] [2]
+print("=-"*20)
+for e in matrix:
+    for d,r in enumerate(e):
+        if d == 2:
+            print(f"[  {r}  ]")
+        else:
+            print(f"[  {r}  ]", end=" ")
+print("=-"*20)
+print(f"A soma dos valores pares é {par}.")
+print(f"A soma dos valores da terceira coluna é {sc3}.")
+print(f"O maior valor da segunda linha é {max(matrix[1])}.")'''
 # Exercício 88
-from time import sleep
-'''from random import randint
+'''from time import sleep
+from random import randint
 from time import sleep
 jogos=[]
 print("-"*30)
@@ -174,8 +203,8 @@ while True:
     n+=1
     if es=="n":
         break
-print(alunos)
-print("No. NOME             MÉDIA")
+print(alunos)'''
+'''print("No. NOME             MÉDIA")
 print("-"*30)
 for c in range(0, len(alunos)):
     print(c, end="   ")
@@ -194,5 +223,5 @@ a=int(input("Monstar as notas de que aluno?(999 para parar):"))
 while a!=999:
     print(f"As notas de {alunos[a][0]} são: {alunos[a][1]}")
     print("-"*40)
-    a = int(input("Monstar as notas de que aluno?(999 para parar):"))'''
-print("FINALIZADO \n<<< VOLTE SEMPRE >>>")
+    a = int(input("Monstar as notas de que aluno?(999 para parar):"))
+print("FINALIZADO \n<<< VOLTE SEMPRE >>>")'''

@@ -97,3 +97,102 @@ if lista.count("(")==lista.count(")"):
     print("Expressão válida.")
 else:
     print("Expressão inválida.")'''
+
+# Exercício 84
+
+'''pessoas=[]
+maior=menor=0
+while True:
+    pessoas.append(input("Digite o nome da pessoa:").title())
+    pessoas.append(float(input("Digite o peso:")))
+    es=input("Quer continuar?:").lower().strip()
+    if es=="n":
+        break
+print(f"Ao todo cadastrou {len(pessoas)//2} pessoas.")
+for c in range(1,len(pessoas),2):
+    if c==1:
+        maior=menor=pessoas[c]
+    elif pessoas[c]>maior:
+        maior=pessoas[c]
+    elif pessoas[c]<menor:
+        menor=pessoas[c]
+print(f"O maior peso foi de {maior}Kg. Peso de:",end=" ")
+for c in range(1,len(pessoas),2):
+    if pessoas[c]==maior:
+        print(pessoas[c-1],end=" ")
+print(f"\nO menor peso foi de {menor}Kg. Peso de:",end=" ")
+for c in range(1,len(pessoas),2):
+    if pessoas[c]==menor:
+        print(pessoas[c-1],end=" ")'''
+
+# Exercício 85
+'''numeros=[[],[]]
+for c in range(0,7):
+    a=int(input(f"Digite o {c+1}º número:"))
+    if a%2==0:
+        numeros[0].append(a)
+    else:
+        numeros[1].append(a)
+numeros[0].sort()
+numeros[1].sort()
+print(f"Os valores pares digitados foram {numeros[0]}.")
+print(f"Os valores ímpares digitados foram {numeros[1]}.")'''
+# Exercício 86
+matriz=[[1,2,3],[4,5,6],[7,8,9]]
+matrix=[1,2,3,4,5,6,7,8,9]
+for c in range(0,9):
+    print(c)
+print("[  1  ]")
+# exercício 87
+# Exercício 88
+from time import sleep
+'''from random import randint
+from time import sleep
+jogos=[]
+print("-"*30)
+print(f"{'EURO MILHÕES':^30}")
+print("-"*30)
+es=int(input("Quantos jogos quer que eu sorteie?:"))
+print(f"{'SORTEANDO JOGOS':-^30}")
+for c in range(0,es):
+    jogos.append([])
+    for d in range(0,6):
+        a=randint(1,60)
+        while a in jogos[c]:
+            a=randint(1,60)
+        jogos[c].append(a)
+    print(f"Jogo {c+1}: {jogos[c]}")
+    sleep(1)
+print(f"{'BOA SORTE!':=^30}")'''
+# Exercício 89
+'''alunos=[]
+n=0
+while True:
+    alunos.append([input("Nome:").title()])
+    alunos[n].append([float(input("Nota 1:")),float(input("Nota 2:"))])
+    es=input("Quer continuar?:").lower().strip()
+    n+=1
+    if es=="n":
+        break
+print(alunos)
+print("No. NOME             MÉDIA")
+print("-"*30)
+for c in range(0, len(alunos)):
+    print(c, end="   ")
+    print(f"{alunos[c][0]:17}", end="")
+    media=(alunos[c][1][0]+alunos[c][1][1])/2
+    print(f"{media:.1f}")
+while True:
+    print("-"*40)
+    a=int(input("Monstar as notas de que aluno?(999 para parar):"))
+    if a ==999:
+        break
+    print(f"As notas de {alunos[a][0]} são: {alunos[a][1]}")'''
+
+'''print("-"*40)
+a=int(input("Monstar as notas de que aluno?(999 para parar):"))
+while a!=999:
+    print(f"As notas de {alunos[a][0]} são: {alunos[a][1]}")
+    print("-"*40)
+    a = int(input("Monstar as notas de que aluno?(999 para parar):"))'''
+print("FINALIZADO \n<<< VOLTE SEMPRE >>>")

@@ -140,7 +140,7 @@ print(f"Os valores ímpares digitados foram {sorted(numeros[1])}.")'''
 
 
 # Exercício 86
-matriz=[[],[],[]]
+'''matriz=[[],[],[]]
 for t in range(0,3):
     for r in range(0,3):
         matriz[t].append(int(input(f"Digita um valor para [{t}, {r}]:")))
@@ -148,11 +148,10 @@ print("=-"*20)
 for e in matriz:
     for d,r in enumerate(e):
         print(f"[{r:^5}]", end=" ")
-    print()
+    print()'''
 # exercício 87
 '''matrix = [[], [], []]
-par=0
-sc3=0
+par=sc3=0
 for t in range(0,3):
     for r in range(0,3):
         matrix[t].append(int(input(f"Digita um valor para [{t}, {r}]:")))
@@ -162,17 +161,15 @@ for t in range(0,3):
 print("=-"*20)
 for e in matrix:
     for d,r in enumerate(e):
-        if d == 2:
-            print(f"[{r:^5}]")
-        else:
-            print(f"[{r:^5}]", end=" ")
+        print(f"[{r:^5}]", end=" ")
+    print()
 print("=-"*20)
 print(f"A soma dos valores pares é {par}.")
 print(f"A soma dos valores da terceira coluna é {sc3}.")
 print(f"O maior valor da segunda linha é {max(matrix[1])}.")'''
 # Exercício 88
-'''from time import sleep
-from random import randint
+from time import sleep
+'''from random import randint
 from time import sleep
 jogos=[]
 print("-"*30)
@@ -187,11 +184,11 @@ for c in range(0,es):
         while a in jogos[c]:
             a=randint(1,60)
         jogos[c].append(a)
-    print(f"Jogo {c+1}: {jogos[c]}")
+    print(f"Jogo {c+1}: {sorted(jogos[c])}")
     sleep(1)
-print(f"{'BOA SORTE!':=^30}")'''
+print(f"{'<BOA SORTE!>':=^30}")'''
 # Exercício 89
-'''alunos=[]
+alunos=[]
 n=0
 while True:
     alunos.append([input("Nome:").title()])
@@ -200,11 +197,10 @@ while True:
     n+=1
     if es=="n":
         break
-print(alunos)'''
-'''print("No. NOME             MÉDIA")
+print("No. NOME             MÉDIA")
 print("-"*30)
 for c in range(0, len(alunos)):
-    print(c, end="   ")
+    print(c, end="   ")   
     print(f"{alunos[c][0]:17}", end="")
     media=(alunos[c][1][0]+alunos[c][1][1])/2
     print(f"{media:.1f}")
@@ -213,11 +209,11 @@ while True:
     a=int(input("Monstar as notas de que aluno?(999 para parar):"))
     if a ==999:
         break
-    print(f"As notas de {alunos[a][0]} são: {alunos[a][1]}")'''
+    print(f"As notas de {alunos[a][0]} são: {alunos[a][1]}")
 
 '''print("-"*40)
 a=int(input("Monstar as notas de que aluno?(999 para parar):"))
-while a!=999:
+while a != 999:
     print(f"As notas de {alunos[a][0]} são: {alunos[a][1]}")
     print("-"*40)
     a = int(input("Monstar as notas de que aluno?(999 para parar):"))

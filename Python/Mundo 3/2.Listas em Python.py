@@ -100,7 +100,7 @@ else:
 
 # Exercício 84
 
-'''pessoas=[]
+pessoas=[]
 maior=menor=0
 while True:
     pessoas.append(input("Digite o nome da pessoa:").title())
@@ -123,7 +123,7 @@ for c in range(1,len(pessoas),2):
 print(f"\nO menor peso foi de {menor}Kg. Peso de:",end=" ")
 for c in range(1,len(pessoas),2):
     if pessoas[c]==menor:
-        print(pessoas[c-1],end=" ")'''
+        print(pessoas[c-1],end=" ")
 
 # Exercício 85
 '''numeros=[[],[]]

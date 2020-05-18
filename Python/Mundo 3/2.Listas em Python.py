@@ -101,30 +101,32 @@ else:
 # Exercício 84
 
 pessoas=[]
+tmp=[]
 maior=menor=0
 while True:
-    pessoas.append(input("Digite o nome da pessoa:").title())
-    pessoas.append(float(input("Digite o peso:")))
+    tmp.append(input("Digite o nome da pessoa:").title())
+    tmp.append(float(input("Digite o peso:")))
+    if len(pessoas)==0:
+        maior=menor=tmp[1]
+    elif tmp[1]>maior:
+        maior=tmp[1]
+    elif tmp[1]<menor:
+        menor=tmp[1]
+    pessoas.append(tmp[:])
+    tmp.clear()
     es=input("Quer continuar?:").lower().strip()
     if es=="n":
         break
-print(f"Ao todo cadastrou {len(pessoas)//2} pessoas.")
-for c in range(1,len(pessoas),2):
-    if c==1:
-        maior=menor=pessoas[c]
-    elif pessoas[c]>maior:
-        maior=pessoas[c]
-    elif pessoas[c]<menor:
-        menor=pessoas[c]
-print(f"O maior peso foi de {maior}Kg. Peso de:",end=" ")
-for c in range(1,len(pessoas),2):
-    if pessoas[c]==maior:
-        print(pessoas[c-1],end=" ")
-print(f"\nO menor peso foi de {menor}Kg. Peso de:",end=" ")
-for c in range(1,len(pessoas),2):
-    if pessoas[c]==menor:
-        print(pessoas[c-1],end=" ")
-
+print(pessoas)
+print(f"Ao todo foram cadastradas {len(pessoas)} pessoas.")
+print(f"O maior peso foi {maior}Kg, que foi o peso de:",end=" ")
+for c in pessoas:
+    if c[1]==maior:
+        print(c[0],end=" ")
+print(f"\nO menor peso foi {menor}Kg, que foi o peso de:",end=" ")
+for c in pessoas:
+    if c[1]==menor:
+        print(c[0],end=" ")
 # Exercício 85
 '''numeros=[[],[]]
 for c in range(0,7):

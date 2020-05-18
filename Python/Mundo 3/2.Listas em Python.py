@@ -147,10 +147,8 @@ for t in range(0,3):
 print("=-"*20)
 for e in matriz:
     for d,r in enumerate(e):
-        if d == 2:
-            print(f"[{r:^5}]")
-        else:
-            print(f"[{r:^5}]", end=" ")
+        print(f"[{r:^5}]", end=" ")
+    print()
 # exercício 87
 '''matrix = [[], [], []]
 par=0

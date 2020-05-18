@@ -100,7 +100,7 @@ else:
 
 # Exercício 84
 
-pessoas=[]
+'''pessoas=[]
 tmp=[]
 maior=menor=0
 while True:
@@ -117,7 +117,6 @@ while True:
     es=input("Quer continuar?:").lower().strip()
     if es=="n":
         break
-print(pessoas)
 print(f"Ao todo foram cadastradas {len(pessoas)} pessoas.")
 print(f"O maior peso foi {maior}Kg, que foi o peso de:",end=" ")
 for c in pessoas:
@@ -126,19 +125,18 @@ for c in pessoas:
 print(f"\nO menor peso foi {menor}Kg, que foi o peso de:",end=" ")
 for c in pessoas:
     if c[1]==menor:
-        print(c[0],end=" ")
+        print(c[0],end=" ")'''
 # Exercício 85
-'''numeros=[[],[]]
-for c in range(0,7):
-    a=int(input(f"Digite o {c+1}º número:"))
+numeros=[[],[]]
+for c in range(1,8):
+    a=int(input(f"Digite o {c}º número:"))
     if a%2==0:
         numeros[0].append(a)
     else:
         numeros[1].append(a)
-numeros[0].sort()
-numeros[1].sort()
-print(f"Os valores pares digitados foram {numeros[0]}.")
-print(f"Os valores ímpares digitados foram {numeros[1]}.")'''
+print("-="*30)
+print(f"Os valores pares digitados foram {sorted(numeros[0])}.")
+print(f"Os valores ímpares digitados foram {sorted(numeros[1])}.")
 
 
 # Exercício 86

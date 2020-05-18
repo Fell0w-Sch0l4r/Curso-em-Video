@@ -192,29 +192,30 @@ alunos=[]
 n=0
 while True:
     alunos.append([input("Nome:").title()])
-    alunos[n].append([float(input("Nota 1:")),float(input("Nota 2:"))])
+    nota1=float(input("Nota 1:"))
+    nota2=float(input("Nota 2:"))
+    alunos[n].append([nota1,nota2])
+    alunos[n].append((nota1+nota2)/2)
     es=input("Quer continuar?:").lower().strip()
     n+=1
     if es=="n":
         break
-print("No. NOME             MÉDIA")
+print(f"{'No':<4}{'NOME':<17}{'MÉDIA'}")
 print("-"*30)
 for c in range(0, len(alunos)):
-    print(c, end="   ")   
-    print(f"{alunos[c][0]:17}", end="")
-    media=(alunos[c][1][0]+alunos[c][1][1])/2
-    print(f"{media:.1f}")
+    print(f"{c:<4}{alunos[c][0]:17}{alunos[c][2]:.1f}")
 while True:
     print("-"*40)
     a=int(input("Monstar as notas de que aluno?(999 para parar):"))
-    if a ==999:
+    if a == 999:
         break
-    print(f"As notas de {alunos[a][0]} são: {alunos[a][1]}")
+    if a<len(alunos)-1:
+        print(f"As notas de {alunos[a][0]} são: {alunos[a][1]}")
 
 '''print("-"*40)
 a=int(input("Monstar as notas de que aluno?(999 para parar):"))
 while a != 999:
     print(f"As notas de {alunos[a][0]} são: {alunos[a][1]}")
     print("-"*40)
-    a = int(input("Monstar as notas de que aluno?(999 para parar):"))
-print("FINALIZADO \n<<< VOLTE SEMPRE >>>")'''
+    a = int(input("Monstar as notas de que aluno?(999 para parar):"))'''
+print("FINALIZADO \n<<< VOLTE SEMPRE >>>")

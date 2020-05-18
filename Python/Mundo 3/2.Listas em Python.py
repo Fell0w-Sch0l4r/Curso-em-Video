@@ -127,7 +127,7 @@ for c in pessoas:
     if c[1]==menor:
         print(c[0],end=" ")'''
 # Exercício 85
-numeros=[[],[]]
+'''numeros=[[],[]]
 for c in range(1,8):
     a=int(input(f"Digite o {c}º número:"))
     if a%2==0:
@@ -136,22 +136,21 @@ for c in range(1,8):
         numeros[1].append(a)
 print("-="*30)
 print(f"Os valores pares digitados foram {sorted(numeros[0])}.")
-print(f"Os valores ímpares digitados foram {sorted(numeros[1])}.")
+print(f"Os valores ímpares digitados foram {sorted(numeros[1])}.")'''
 
 
 # Exercício 86
-'''matrix=[[],[],[]]
+matriz=[[],[],[]]
 for t in range(0,3):
     for r in range(0,3):
-        matrix[t].append(int(input(f"Digita um valor para [{t}, {r}]:")))
-print(matrix)
+        matriz[t].append(int(input(f"Digita um valor para [{t}, {r}]:")))
 print("=-"*20)
-for e in matrix:
+for e in matriz:
     for d,r in enumerate(e):
         if d == 2:
-            print(f"[  {r}  ]")
+            print(f"[{r:^5}]")
         else:
-            print(f"[  {r}  ]", end=" ")'''
+            print(f"[{r:^5}]", end=" ")
 # exercício 87
 '''matrix = [[], [], []]
 par=0
@@ -166,9 +165,9 @@ print("=-"*20)
 for e in matrix:
     for d,r in enumerate(e):
         if d == 2:
-            print(f"[  {r}  ]")
+            print(f"[{r:^5}]")
         else:
-            print(f"[  {r}  ]", end=" ")
+            print(f"[{r:^5}]", end=" ")
 print("=-"*20)
 print(f"A soma dos valores pares é {par}.")
 print(f"A soma dos valores da terceira coluna é {sc3}.")

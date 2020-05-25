@@ -10,16 +10,12 @@ comprimento=float(input("COMPRIMENTO (m):"))
 área(comprimento,largura)'''
 
 # Exercício 97
-'''def escreva(x):
+def escreva(x):
     tam=len(x)+4
     print("~"*tam)
     print(f"  {x}")
     print("~"*tam)
 
-
-escreva("Ângel Cagiza")
-escreva("no")
-escreva("Ângel Rodolfo Gomes Cagiza")'''
 
 # Exercício 98
 '''def contador(i, f, p):
@@ -51,7 +47,7 @@ fim=int(input("Fim:"))
 passo=int(input("Passo:"))
 contador(inicio,fim,passo)'''
 # Exercício 99
-'''def maior(*x):
+def maior(*x):
     from time import sleep
     print("=-"*35)
     print("Analisando os valores processados...")
@@ -63,11 +59,6 @@ contador(inicio,fim,passo)'''
         print(f"O maior valor informado foi {max(x)}.")
 
 
-maior(2,9,4,5,7,1)
-maior(4,7,0)
-maior(1,2)
-maior(6)
-maior()'''
 
 # Exercício 100
 '''def sorteia(x):
@@ -131,4 +122,76 @@ def factorial(n, show = False):
         return resp
 
 
-print(factorial(5,False))
+# Exercício 103
+'''def ficha(nome="<desconhecido>",golos=0):
+    if nome=="":
+        nome="<desconhecido>"
+    if golos=="":
+        golos=0
+    print(f"O jogador {nome} fez {golos} golo(s) no campeonato.")
+
+
+nome=input("Nome do jogador:")
+golo=input("Número de Golos:")
+if golo != "":
+    golo=int(golo)
+ficha(nome,golo)'''
+
+# Exercício 104
+def leiaint(texto):
+    a=input(texto)
+    while not a.isnumeric():
+        print("\033[31mERRO! Digite um número inteiro válido.\033[m")
+        a=input(texto)
+    return a
+
+
+'''n = leiaint("Digite um número:")
+print(f"Digitou o número {n}.")'''
+
+# Exercício 105
+def notas(*n,sit=False):
+    '''
+    →Função para analisar notas e situação de vários alunos.
+    :param n: Uma ou mais notas e situações de vários alunos.
+    :param sit: (OPCIONAL), indica se deve ou não adicionar a situação.
+    :return: Dicionárrio com várias informções sobre a situação da turma.
+    '''
+    dic={"total":len(n),"maior":max(n),"menor":min(n),"média":0}
+    for c in n:
+        dic["média"]+=c
+    dic["média"]/=len(n)
+    if sit:
+        if dic["média"]>15:
+            dic["situação"]="BOA"
+        elif 10<=dic["média"]<15:
+            dic["situação"]="SUFICIENTE"
+        else:
+            dic["situação"]="MÁ"
+    return dic
+
+
+'''resp=notas(20,19,16.5,20,17,14)
+print(resp)'''
+
+# Exercício 106
+from time import sleep
+while True:
+    print("\033[33m~"*27)
+    print("  SISTEMA DE AJUDA PyHELP")
+    print("\033[33m~\033[m"*27)
+    a=input("Função ou Biblioteca > ").strip().lower()
+    if a == "fim":
+        break
+    sleep(0.5)
+    print("\033[34m~"*(34+len(a)))
+    print(f"  Acessamdo o manual do comando {a}")
+    print("\033[34m~\033[m"*(34+len(a)))
+    sleep(0.5)
+    print("\033[32m")
+    help(a)
+    print("\033[m")
+sleep(0.5)
+print("\033[31m~"*12)
+print("  ATÉ LOGO")
+print("\033[31m~\033[m"*12)

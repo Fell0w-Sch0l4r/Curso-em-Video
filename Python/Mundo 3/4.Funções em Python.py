@@ -1,13 +1,13 @@
 # Exercício 96
-'''def área(a,b):
-    print(f"A área do terreno {comprimento}x{largura} é de {a*b}m².")
+def area(a,b):
+    print(f"A área do terreno {a}x{b} é de {a*b}m².")
 
 
-print("  Controlo de Terrenos")
+'''print("  Controlo de Terrenos")
 print("-"*25)
 largura=float(input("LARGURA (m):"))
 comprimento=float(input("COMPRIMENTO (m):"))
-área(comprimento,largura)'''
+area(comprimento,largura)'''
 
 # Exercício 97
 def escreva(x):
@@ -18,7 +18,7 @@ def escreva(x):
 
 
 # Exercício 98
-'''def contador(i, f, p):
+def contador(i, f, p):
     from time import sleep
     print("=-"*25)
     sleep(1)
@@ -38,7 +38,7 @@ def escreva(x):
     print("FIM!")
 
 
-contador(1,10,1)
+'''contador(1,10,1)
 contador(10,0,2)
 print("=-"*25)
 print("Agora é a sua vez de personalisar a contagem.")
@@ -61,7 +61,7 @@ def maior(*x):
 
 
 # Exercício 100
-'''def sorteia(x):
+def sorteia(x):
     from random import randint
     from time import sleep
     print("Sorteando 5 valores da lista:",end=" ")
@@ -80,7 +80,7 @@ def soma_par(x):
     print(f"Somando os valores pares de {x}, temos {soma}.")
 
 
-valores=[]
+'''valores=[]
 sorteia(valores)
 soma_par(valores)'''
 
@@ -88,10 +88,10 @@ soma_par(valores)'''
 
 # Exercício 101
 
-'''def voto(ano_nas):
+def voto(ano_nas):
     from datetime import date
     idade = date.today().year-ano_nas
-    if 65> idade >= 18:
+    if 65 > idade >= 18:
         return f"Com {idade} anos: VOTO OBRIGATÓRIO"
     elif idade < 18:
         return f"Com {idade} anos: NÃO VOTA"
@@ -99,7 +99,7 @@ soma_par(valores)'''
         return f"Com {idade} anos: VOTO OPCIONAL"
 
 
-print("-"*35)
+'''print("-"*35)
 print(voto(int(input("Em que ano nasceste?:"))))'''
 
 # Exercício 102
@@ -107,7 +107,7 @@ def factorial(n, show = False):
     '''
     -> Calcula o factorial de um número.
     :param n: O número a ser calculado.
-    :param show: (OPCIONAL) Mosrar ou não a conta.
+    :param show: (OPCIONAL) Mostrar ou não a conta.
     :return: O valor do factorial de um número n.
     '''
     print("-"*30)
@@ -122,20 +122,23 @@ def factorial(n, show = False):
         return resp
 
 
+# help(factorial)
+
 # Exercício 103
-'''def ficha(nome="<desconhecido>",golos=0):
-    if nome=="":
-        nome="<desconhecido>"
-    if golos=="":
-        golos=0
+def ficha(nome="<desconhecido>",golos=0):
     print(f"O jogador {nome} fez {golos} golo(s) no campeonato.")
 
 
-nome=input("Nome do jogador:")
-golo=input("Número de Golos:")
-if golo != "":
-    golo=int(golo)
-ficha(nome,golo)'''
+'''nome = input("Nome do jogador:").strip()
+golo = input("Número de Golos:")
+if golo.isnumeric():
+    golo = int(golo)
+else:
+    golo = 0
+if nome == "":
+    ficha(golos=golo)
+else:
+    ficha(nome,golo)'''
 
 # Exercício 104
 def leiaint(texto):
@@ -171,10 +174,11 @@ def notas(*n,sit=False):
     return dic
 
 
-'''resp=notas(20,19,16.5,20,17,14)
+'''resp = notas(5.5, 2.5, 1.5)
 print(resp)'''
 
 # Exercício 106
+'''
 from time import sleep
 while True:
     print("\033[33m~"*27)
@@ -188,10 +192,12 @@ while True:
     print(f"  Acessamdo o manual do comando {a}")
     print("\033[34m~\033[m"*(34+len(a)))
     sleep(0.5)
-    print("\033[32m")
+    print("\033[35m",end="")
     help(a)
-    print("\033[m")
+    print("\033[m",end="")
 sleep(0.5)
 print("\033[31m~"*12)
 print("  ATÉ LOGO")
 print("\033[31m~\033[m"*12)
+
+'''

@@ -112,19 +112,23 @@ print("-"*35)
 print(voto(int(input("Em que ano nasceste?:"))))'''
 
 # Exercício 102
-def factorial(num,show=False):
+def factorial(n, show = False):
+    '''
+    -> Calcula o factorial de um número.
+    :param n: O número a ser calculado.
+    :param show: (OPCIONAL) Mosrar ou não a conta.
+    :return: O valor do factorial de um número n.
+    '''
     print("-"*30)
-    res = 1
+    resp = 1
+    conta = ""
+    for c in range(n, 0, -1):
+        resp *= c
+        conta += f"{c} x " if c > 1 else f"{c} = {resp}"
     if show:
-        re = ""
-        for c in range(num, 0, -1):
-            res *= c
-            re += f"{c} x " if c > 1 else f"{c} = {res}"
-        return re
+        return conta
     else:
-        for c in range(num, 0, -1):
-            res *= c
-        return res
+        return resp
 
 
-print(factorial(89))
+print(factorial(5,False))

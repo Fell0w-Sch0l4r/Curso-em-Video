@@ -22,25 +22,24 @@ escreva("no")
 escreva("Ângel Rodolfo Gomes Cagiza")'''
 
 # Exercício 98
-'''def contador(i,f,p):
+'''def contador(i, f, p):
     from time import sleep
     print("=-"*25)
     sleep(1)
-    if p==0:
-        p=1
-    if i<f:
-        print(f"Contagem de {i} até {f} de {p} em {p}.")
-        for c in range(i,f+1,p):
-            print(c,end=" ",flush=True)
+    if p < 0:
+        p = -p
+    elif p == 0:
+        p = 1
+    print(f"Contagem de {i} até {f} de {p} em {p}.")
+    if i < f:
+        for c in range(i, f+1, p):
+            print(c, end=" ", flush=True)
             sleep(.5)
-        print("FIM!")
     else:
-        if p<0:p=-p
-        print(f"Contagem de {i} até {f} de {p} em {p}.")
-        for c in range(i,f-1,-p):
-            print(c,end=" ",flush=True)
+        for c in range(i, f-1, -p):
+            print(c, end=" ", flush=True)
             sleep(.5)
-        print("FIM!")
+    print("FIM!")
 
 
 contador(1,10,1)
@@ -51,7 +50,6 @@ inicio=int(input("Início:"))
 fim=int(input("Fim:"))
 passo=int(input("Passo:"))
 contador(inicio,fim,passo)'''
-
 # Exercício 99
 '''def maior(*x):
     from time import sleep
@@ -94,3 +92,39 @@ def soma_par(x):
 valores=[]
 sorteia(valores)
 soma_par(valores)'''
+
+
+
+# Exercício 101
+
+'''def voto(ano_nas):
+    from datetime import date
+    idade = date.today().year-ano_nas
+    if 65> idade >= 18:
+        return f"Com {idade} anos: VOTO OBRIGATÓRIO"
+    elif idade < 18:
+        return f"Com {idade} anos: NÃO VOTA"
+    else:
+        return f"Com {idade} anos: VOTO OPCIONAL"
+
+
+print("-"*35)
+print(voto(int(input("Em que ano nasceste?:"))))'''
+
+# Exercício 102
+def factorial(num,show=False):
+    print("-"*30)
+    res = 1
+    if show:
+        re = ""
+        for c in range(num, 0, -1):
+            res *= c
+            re += f"{c} x " if c > 1 else f"{c} = {res}"
+        return re
+    else:
+        for c in range(num, 0, -1):
+            res *= c
+        return res
+
+
+print(factorial(89))

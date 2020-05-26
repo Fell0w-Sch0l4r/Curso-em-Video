@@ -178,7 +178,7 @@ def notas(*n,sit=False):
 print(resp)'''
 
 # Exercício 106
-'''
+
 from time import sleep
 while True:
     print("\033[33m~"*27)
@@ -200,4 +200,4 @@ print("\033[31m~"*12)
 print("  ATÉ LOGO")
 print("\033[31m~\033[m"*12)
 
-'''
+

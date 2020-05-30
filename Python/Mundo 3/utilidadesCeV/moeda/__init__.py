@@ -1,11 +1,5 @@
 def moeda(x):
-    b=""
-    for c in str(x):
-        if c==".":
-            b+=","
-        else:
-            b+=c
-    return f"€{b}"
+    return f"€{x:.2f}".replace(".", ",")
 
 
 def metade(x,show=False):
@@ -37,6 +31,13 @@ def diminuir(x, y,show=False):
 
 
 def resumo(x,au,rd):
+    '''
+    Criei, escrevi, fszi.
+    :param x: Valor monetário
+    :param au: Aumento em percentagem
+    :param rd: Redução em Percentagem
+    :return:
+    '''
     print("-"*35)
     print("         RESUMO DO VALOR")
     print("-"*35)
@@ -45,6 +46,11 @@ def resumo(x,au,rd):
     print(f"{'Metade do preço:':<20}{moeda(x/2)}")
     print(f"{au}{'% de aumento:':<17} {aumentar(x,au,True)}")
     print(f"{rd}{'% de redução:':<17} {diminuir(x,rd,True)}")
-    print("-"*35)
 
+def leiaDinheiro(texto):
+    a = input(texto)
 
+    while not a.isdecimal():
+        print(f"\033[31mERRO: {a} é um preço inválido!\033[m")
+        a = input(texto)
+    return a

@@ -45,14 +45,6 @@ def resumo(x,au,rd):
     print(f"{'Metade do preço:':<20}{moeda(x/2)}")
     print(f"{au}{'% de aumento:':<17} {aumentar(x,au,True)}")
     print(f"{rd}{'% de redução:':<17} {diminuir(x,rd,True)}")
-
-def leiaDinheiro(texto):
-    a = input(texto)
-
-    while not a.isdecimal():
-        print(f"\033[31mERRO: {a} é um preço inválido!\033[m")
-        a = input(texto)
-    return a
+    print("-"*35)
 
 
-p=leiaDinheiro("Digita o preço mnb:")

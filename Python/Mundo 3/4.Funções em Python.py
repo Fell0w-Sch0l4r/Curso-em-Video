@@ -142,15 +142,22 @@ else:
 
 # Exercício 104
 def leiaint(texto):
-    a=input(texto)
-    while not a.isnumeric():
-        print("\033[31mERRO! Digite um número inteiro válido.\033[m")
+    #a=input(texto)
+    #while not a.isnumeric():
+    #    print("\033[31mERRO! Digite um número inteiro válido.\033[m")
+    #    a=input(texto)
+    #return a
+
+    while True:
         a=input(texto)
+        if a.isnumeric():
+            break
+        print(f"\033[31mERRO! Digite um número inteiro válido.\033[m")
     return a
 
 
-'''n = leiaint("Digite um número:")
-print(f"Digitou o número {n}.")'''
+n = leiaint("Digite um número:")
+print(f"Digitou o número {n}.")
 
 # Exercício 105
 def notas(*n,sit=False):
@@ -178,8 +185,8 @@ def notas(*n,sit=False):
 print(resp)'''
 
 # Exercício 106
-'''
-from time import sleep
+
+'''from time import sleep
 while True:
     print("\033[33m~"*27)
     print("  SISTEMA DE AJUDA PyHELP")
@@ -198,7 +205,6 @@ while True:
 sleep(0.5)
 print("\033[31m~"*12)
 print("  ATÉ LOGO")
-print("\033[31m~\033[m"*12)
+print("\033[31m~\033[m"*12)'''
 
-'''
 

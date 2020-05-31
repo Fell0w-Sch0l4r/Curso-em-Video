@@ -1,56 +1,49 @@
-def moeda(x):
-    return f"€{x:.2f}".replace(".", ",")
+def moeda(x, moeda="€"):
+    return f"{moeda}{x:.2f}".replace(".", ",")
 
 
-def metade(x,show=False):
+def metade(x, show=False, moed="€"):
     if show:
-        return moeda(x*2)
+        return moeda(x*2, moed)
     else:
         return x/2
 
 
-def dobro(x,show=False):
+def dobro(x, show=False, moed="€"):
     if show:
-        return moeda(2*x)
+        return moeda(2*x, moed)
     else:
         return 2 * x
 
 
-def aumentar(x, y,show=False):
+def aumentar(x, y,show=False,moed="€"):
     if show:
-        return moeda(x + x*(y/100))
+        return moeda(x + x*(y/100),moed)
     else:
         return x + x*(y/100)
 
 
-def diminuir(x, y,show=False):
+def diminuir(x, y,show=False,moed="€"):
     if show:
-        return moeda(x-x*(y/100))
+        return moeda(x-x*(y/100),moed)
     else:
         return x - x * (y / 100)
 
 
-def resumo(x,au,rd):
+def resumo(x ,au=10, rd=5):
     '''
-    Criei, escrevi, fszi.
+    Criei, escrevi, fazi.
     :param x: Valor monetário
     :param au: Aumento em percentagem
     :param rd: Redução em Percentagem
-    :return:
+    :return: Não retorna nenhum valor
     '''
     print("-"*35)
-    print("         RESUMO DO VALOR")
+    print(f"{'RESUMO DO VALOR':^35}")
     print("-"*35)
-    print(f"{'Preço analisado:':<20}{moeda(x)}")
-    print(f"{'Dobro do preço:':<20}{moeda(x*2)}")
-    print(f"{'Metade do preço:':<20}{moeda(x/2)}")
-    print(f"{au}{'% de aumento:':<17} {aumentar(x,au,True)}")
-    print(f"{rd}{'% de redução:':<17} {diminuir(x,rd,True)}")
+    print(f"Preço analisado: \t{moeda(x)}")
+    print(f"Dobro do preço: \t{moeda(x*2)}")
+    print(f"Metade do preço: \t{moeda(x/2)}")
+    print(f"{au}% de aumento: \t{aumentar(x,au,True)}")
+    print(f"{rd}% de redução: \t{diminuir(x,rd,True)}")
 
-def leiaDinheiro(texto):
-    a = input(texto)
-
-    while not a.isdecimal():
-        print(f"\033[31mERRO: {a} é um preço inválido!\033[m")
-        a = input(texto)
-    return a
